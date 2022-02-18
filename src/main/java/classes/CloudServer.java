@@ -3,19 +3,28 @@ package classes;
 import edu.fiu.jit.SelfCheckCapable;
 import edu.fiu.jit.SelfCheckUtils;
 
-public class Sensor implements SelfCheckCapable{
+public class CloudServer implements SelfCheckCapable{
 
-		private String DetectObject;
-		private String location;
+	public CloudServer() {
+		int storage;
+		int wirelessconnection;
+	}
+		public void AutomaticDownload() {
+			
+		}
+		
+		public void CheckCompatibility() {
+			
+		}
 		@Override
 		public String getComponentName() {
 			// TODO Auto-generated method stub
-			return "Sensor";
+			return "CloudServer";
 		}
 		@Override
 		public boolean selfCheck() {
 			// TODO Auto-generated method stub
 			return SelfCheckUtils.randomCheck(0.5);
 		}
-	}
 
+}

@@ -1,6 +1,9 @@
 package classes;
 
-public class ControlBoard extends SmartCarKit{
+import edu.fiu.jit.SelfCheckCapable;
+import edu.fiu.jit.SelfCheckUtils;
+
+public class ControlBoard implements SelfCheckCapable{
 
 		private String location;
 		private String coating;
@@ -13,6 +16,18 @@ public class ControlBoard extends SmartCarKit{
 	
 	public void SendSignal() {
 		
+	}
+
+	@Override
+	public String getComponentName() {
+		// TODO Auto-generated method stub
+		return "Board";
+	}
+
+	@Override
+	public boolean selfCheck() {
+		// TODO Auto-generated method stub
+		return SelfCheckUtils.randomCheck(0.5);
 	}
 
 }
